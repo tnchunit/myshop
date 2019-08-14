@@ -11,12 +11,11 @@
 |
  */
 Route::get('/', function () {
-    return view('welcome')->with('name', 'tnchunit')->with('say', '嗨！');
+    return view('product.index');
 });
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/product', function () {
+    return view('product.index');
+});
 
 Auth::routes();
 
