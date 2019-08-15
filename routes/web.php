@@ -17,9 +17,12 @@
 //     return view('product.index');
 // });
 
+Route::pattern('id', '[0-9]+');
+
 Auth::routes();
 
 Route::get('/', 'ProductController@index')->name('index');
-Route::get('/product', 'ProductController@index')->name('product.index');
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/product', 'ProductController@index')->name('product.index');
+Route::get('/product/{id}', 'ProductController@show')->name('product.show');
